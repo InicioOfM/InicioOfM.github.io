@@ -27,3 +27,7 @@ btnSi.addEventListener('click', () => {
     window.location.href = 'si.html'; // Redirige a si.html
   }, 500); // espera que termine la animación (0.5s)
 });
+
+setTimeout(function() {
+  alert("AVER SI LE DAS A NO PSSS GAAAAAAA XD");
+}, 7000);
