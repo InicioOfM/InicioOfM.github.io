@@ -8,7 +8,7 @@ function obtenerHoraPeru() {
 function obtenerFechaObjetivo() {
   const ahora = obtenerHoraPeru();
   const objetivo = new Date(ahora);
-  objetivo.setHours(23, 0, 0, 0); // HOY a las 18:00
+  objetivo.setHours(19, 0, 0, 0); // HOY a las 18:00
   return objetivo;
 }
 
