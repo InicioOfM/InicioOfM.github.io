@@ -22,7 +22,7 @@ document.getElementById('modo-toggle').addEventListener('click', () => {
   });
 
   setTimeout(function() {
-    alert("AVER SI LE DAS A NO PSSS GAAAAAAA XD");
+    alert("Pista: usa las notitas amor");
   }, 7000);
   
   
