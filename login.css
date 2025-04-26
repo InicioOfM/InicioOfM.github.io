@@ -1,0 +1,161 @@
+/* Login estilos */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #68bae3, #ffd3e3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: background 0.5s, color 0.5s;
+  }
+  
+  #modo-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    border: none;
+    background: #030068;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    z-index: 999;
+  }
+  
+  .contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    background: white;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.2);
+    max-width: 900px;
+    width: 90%;
+  }
+  
+  .imagen {
+    flex: 1 1 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 300px; /* control sobre el tamaño del DIV */
+    overflow: hidden;
+  }
+  
+  .imagen img {
+    width: 100%;
+    height: auto;
+    max-height: 250px; /* límite para que NO estire el contenedor */
+    border-radius: 15px;
+    object-fit: cover;
+  }
+  
+  
+  
+  .login-form {
+    flex: 1 1 300px;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+  }
+  
+  .login-form h2 {
+    margin-bottom: 20px;
+    color: #e91e63;
+    font-size: 2rem;
+  }
+  
+  .input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+  }
+  
+  .input-group small {
+    margin-bottom: 5px;
+    font-size: 0.85rem;
+    color: #666;
+  }
+  
+  .login-form input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+  }
+  
+  .login-form button {
+    padding: 12px;
+    background-color: #e91e63;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+  }
+  
+  .login-form button:hover {
+    background-color: #c2185b;
+  }
+  
+  /* Corazones animados */
+  .corazones {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+  }
+  
+  .corazones span {
+    position: absolute;
+    display: block;
+    width: var(--size);
+    height: var(--size);
+    background: url('https://cdn-icons-png.flaticon.com/512/833/833472.png') no-repeat center;
+    background-size: contain;
+    animation: flotar var(--speed) linear infinite;
+    top: calc(100% + 50px);
+    left: calc(20% * var(--i));
+  }
+  
+  @keyframes flotar {
+    0% { transform: translateY(0) scale(1); opacity: 0.7; }
+    50% { opacity: 1; }
+    100% { transform: translateY(-110vh) scale(1.2); opacity: 0; }
+  }
+  
+  /* Animación */
+  .animar-entrada {
+    animation: aparecer 1s ease-out forwards;
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  
+  @keyframes aparecer {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Modo oscuro */
+  body.modo-oscuro {
+    background: linear-gradient(135deg, #0d4379, #040c3e);
+    color: white;
+  }
+  
+  body.modo-oscuro .contenedor {
+    background: #212121;
+  }
+  

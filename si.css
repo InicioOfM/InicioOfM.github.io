@@ -1,0 +1,166 @@
+/* Fondo romántico */
+body {
+  background: linear-gradient(135deg, #c9c0f7 0%, #9ce7f8 99%, #8e9bf2 100%);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Contenedor del mensaje */
+.mensaje-container {
+  background: rgba(97, 30, 242, 0.24);
+  padding: 2rem;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.989);
+  text-align: center;
+  animation: aparecer 2s ease forwards, latido 3s infinite;
+  max-width: 90%;
+}
+
+/* Imagen dentro del contenedor */
+.imagen-romantica {
+  width:80%;
+  max-width: 150px;
+  height: 200px;
+  border-radius: 15px;
+  margin-bottom: 1rem;
+  animation: flotarImagen 4s ease-in-out infinite alternate;
+}
+
+/* Texto */
+.mensaje-container h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.mensaje-container p {
+  font-size: 1.2rem;
+}
+
+/* Animación de aparición */
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Animación de latido */
+@keyframes latido {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.03);
+  }
+}
+
+/* Animación de flotar imagen */
+@keyframes flotarImagen {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Corazones flotando */
+.corazones {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.corazon {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: rgb(86, 98, 210);
+  transform: rotate(45deg);
+  animation: flotar 8s infinite ease-in-out;
+  opacity: 0.7;
+}
+
+.corazon::before,
+.corazon::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: rgb(86, 98, 210);
+  border-radius: 50%;
+}
+
+.corazon::before {
+  top: -10px;
+  left: 0;
+}
+
+.corazon::after {
+  left: -10px;
+  top: 0;
+}
+
+/* Animación corazones */
+@keyframes flotar {
+  0% {
+    transform: translateY(100vh) rotate(45deg) scale(1);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(-10vh) rotate(45deg) scale(1.2);
+    opacity: 0;
+  }
+}
+
+/* Posiciones aleatorias para los corazones */
+.corazon:nth-child(1) { left: 10%; animation-delay: 0s; }
+.corazon:nth-child(2) { left: 30%; animation-delay: 2s; }
+.corazon:nth-child(3) { left: 50%; animation-delay: 4s; }
+.corazon:nth-child(4) { left: 70%; animation-delay: 1s; }
+.corazon:nth-child(5) { left: 85%; animation-delay: 3s; }
+.corazon:nth-child(6) { left: 20%; animation-delay: 5s; }
+
+/* Footer con botón */
+footer {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+footer button {
+  background-color: #e91e63;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+footer button:hover {
+  background-color: #c2185b;
+}

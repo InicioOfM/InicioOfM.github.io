@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login</title>
+  <link rel="stylesheet" href="login.css">
+  <audio src="gonespider.mp3" autoplay loop></audio>
+</head>
+<body>
+  <button id="modo-toggle">🌙 Cambiar modo</button>
+
+  <div class="contenedor animar-entrada">
+    <div class="imagen">
+      <img src="spidylove.png" alt="Imagen Romántica">
+    </div>
+    <div class="login-form">
+      <h2>Bienvenida💖</h2>
+      <form id="login-formulario">
+        <div class="input-group">
+          <input type="text" id="usuario" placeholder="Usuario" required>
+        </div>
+        <div class="input-group">
+          <small>1-5-7-3-4-2-9-6-8</small>
+          <input type="password" id="contrasena" placeholder="Contraseña" required>
+        </div>
+        <button type="submit" id="ingresar">Ingresar</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="corazones">
+    <span style="--i:1; --size:20px; --speed:10s;"></span>
+    <span style="--i:2; --size:30px; --speed:12s;"></span>
+    <span style="--i:3; --size:25px; --speed:8s;"></span>
+    <span style="--i:4; --size:35px; --speed:14s;"></span>
+    <span style="--i:5; --size:22px; --speed:11s;"></span>
+  </div>
+
+  <script src="login.js"></script>
+</body>
+</html>

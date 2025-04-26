@@ -1,0 +1,50 @@
+body {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #7c86de, #eaf89a);
+  color: white;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pregunta-container {
+  background: white;
+  color: #333;
+  padding: 2rem;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 0 30px rgba(0,0,0,0.2);
+  position: relative;
+  overflow: hidden;
+  width: 90%;
+  max-width: 400px;
+}
+
+.botones button {
+  margin: 10px;
+  padding: 15px 30px;
+  background-color: #e91e63;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.botones button:hover {
+  background-color: #c2185b;
+}
+
+
+/* Definimos la animación */
+@keyframes aparecer {
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
