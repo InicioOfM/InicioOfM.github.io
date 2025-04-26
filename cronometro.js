@@ -4,12 +4,11 @@ function obtenerHoraPeru() {
   return new Date(ahoraUTC - (5 * 60 * 60 * 1000));
 }
 
-// Calcula la fecha de mañana a las 18:00 (hora Perú)
+// Calcula la fecha de hoy a las 18:00 (hora Perú)
 function obtenerFechaObjetivo() {
   const ahora = obtenerHoraPeru();
   const objetivo = new Date(ahora);
-  objetivo.setDate(objetivo.getDate() + 1);
-  objetivo.setHours(18, 0, 0, 0);
+  objetivo.setHours(18, 0, 0, 0); // HOY a las 18:00
   return objetivo;
 }
 
@@ -45,7 +44,6 @@ function mostrarCartaRomantica() {
 const intervalo = setInterval(actualizarCuentaRegresiva, 1000);
 actualizarCuentaRegresiva();
 
-
 setTimeout(function() {
   alert("Te quiero mucho mi niña, solo puedo decir que vayas juntando las notitas jeje.<3.");
-}, 10000); // 3000 milisegundos = 3 segundos
+}, 10000);
