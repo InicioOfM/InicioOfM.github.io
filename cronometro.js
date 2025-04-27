@@ -12,7 +12,7 @@ function obtenerFechaObjetivo() {
   return objetivo;
 }
 
-const fechaFinal = obtenerFechaObjetivo();
+const fechaFinal = new Date(obtenerHoraPeru().getTime() + 10000); // 10 segundos
 
 function actualizarCuentaRegresiva() {
   const ahora = obtenerHoraPeru();
