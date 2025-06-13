@@ -7,23 +7,23 @@
       padding: 0;
       font-family: 'Georgia', serif;
     }
-    body {
-        background: #2b3358;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: calc(var(--vh, 100vh))*100;
-        overflow: hidden;
-        position: relative;
-        width: 100vw;
-    }
+body {
+  background: #2b3358;
+  display: flex;
+  justify-content: center;
+  padding: 40px 0; /* Espacio arriba y abajo */
+  min-height: 100vh; /* ✅ Permite crecer si hay más contenido */
+  overflow-x: hidden; /* Oculta desbordes horizontales */
+  position: relative;
+}
 
-    .album-container {
-      width: 90%;
-      max-width: 800px;
-      height: 90%;
-      position: relative;
-    }
+.album-container {
+  width: 90%;
+  max-width: 800px;
+  min-height: 90vh; /* ❌ No height fija */
+  position: relative;
+}
+
 
     .floating-hearts {
         position: fixed;
@@ -70,18 +70,19 @@
           opacity: 0;
         }
       }
-    .album-inner {
-      width: 100%;
-      height: 100%;
-      border: 3px solid #f3ffc2;
-      border-radius: 16px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.2);
-      background: #fffce5;
-      position: relative;
-      overflow: hidden;
-      transition: transform 1s ease;
-      transform-style: preserve-3d;
-    }
+.album-inner {
+  width: 100%;
+  min-height: 100%; /* Permite crecer con el contenido */
+  border: 3px solid #f3ffc2;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  background: #fffce5;
+  position: relative;
+  overflow: hidden;
+  transition: transform 1s ease;
+  transform-style: preserve-3d;
+}
+
 
     .page-number {
   position: absolute;
@@ -189,15 +190,16 @@
       from { opacity: 0; transform: translateX(30px); }
       to { opacity: 1; transform: translateX(0); }
     }
-    .media {
-      max-height: 40vh;
-      margin: 10px auto;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      width: 90%;
-      height: auto;
-      display: block;
-    }
+.media {
+  width: 90%;
+  height: auto;
+  max-height: 60vh; /* más alto para video */
+  margin: 10px auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  display: block;
+}
+
 
 
     .description {
