@@ -35,6 +35,18 @@ function openAlbum() {
       document.getElementById(`page${currentPage}`).classList.add('active');
     }
 
+    function ajustarAlturaViewport() {
+  let vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
+}
+
+
+ajustarAlturaViewport();
+
+
+window.addEventListener('resize', ajustarAlturaViewport);
+
+
 
     setTimeout(function() {
   alert("Con mucho amor para ti mi niña ❤️✨");
