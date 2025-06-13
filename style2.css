@@ -12,9 +12,10 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 100vh;
+        height: calc(var(--vh, 100vh))*100;
         overflow: hidden;
         position: relative;
+        width: 100vw;
     }
 
     .album-container {
@@ -193,7 +194,12 @@
       margin: 10px auto;
       border-radius: 10px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      width: 90%;
+      height: auto;
+      display: block;
     }
+
+
     .description {
       margin-top: 10px;
       color: #6d2e46;
