@@ -35,22 +35,7 @@ function openAlbum() {
       document.getElementById(`page${currentPage}`).classList.add('active');
     }
 
-function ajustarTamañoPantalla() {
-  const vh = window.innerHeight * 0.01;
-  document.documentElement.style.setProperty('--vh', `${vh}px`);
 
-  // También aseguramos el ancho si hiciera falta ajustes más adelante
-  const vw = window.innerWidth * 0.01;
-  document.documentElement.style.setProperty('--vw', `${vw}px`);
-}
-
-window.addEventListener('resize', ajustarTamañoPantalla);
-window.addEventListener('load', ajustarTamañoPantalla);
-ajustarTamañoPantalla();
-
-
-
-window.addEventListener('resize', ajustarAlturaViewport);
 
 
 
