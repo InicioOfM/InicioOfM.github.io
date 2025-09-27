@@ -1,0 +1,77 @@
+<html lang="es">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Cuenta regresiva - 23:55</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="contador.css">
+<audio src="cumple.mp3" autoplay loop></audio>
+</head>
+<body>
+<div class="carousel" aria-hidden="true">
+<div class="slide active" data-type="video">
+<video playsinline muted loop preload="auto" autoplay>
+<source src="v1.mp4" type="video/mp4">
+</video>
+</div>
+<div class="slide" data-type="image">
+<img src="d3.jpg" alt="fondo romántico 1">
+</div>
+<div class="slide" data-type="image">
+<img src="cu1.jpg" alt="fondo romántico 2">
+</div>
+<div class="slide" data-type="video">
+<video playsinline muted loop preload="auto">
+<source src="v2.mp4" type="video/mp4">
+</video>
+</div>
+<div class="slide" data-type="image">
+<img src="d4.jpg" alt="fondo romántico 2">
+</div>
+<div class="slide" data-type="image">
+<img src="cu2.jpg" alt="fondo romántico 2">
+</div>
+<div class="slide" data-type="video">
+<video playsinline muted loop preload="auto">
+<source src="v4.mp4" type="video/mp4">
+</video>
+</div>
+<div class="slide" data-type="image">
+<img src="d1.jpg" alt="fondo romántico 2">
+</div>
+<div class="slide" data-type="image">
+<img src="cu3.jpg" alt="fondo romántico 2">
+</div>
+</div>
+
+
+<div class="overlay"></div>
+
+
+<main class="wrap">
+<section class="card" role="region" aria-label="Cuenta regresiva para hoy a las 23:55">
+<div class="left">
+<h1>TE AMO</h1>
+<p>Se abre en:</p>
+<div class="countdown" id="countdown">
+<div class="unit" id="u-h"><div class="value" id="hours">00</div><div class="label">Horas</div></div>
+<div class="unit" id="u-m"><div class="value" id="minutes">00</div><div class="label">Minutos</div></div>
+<div class="unit" id="u-s"><div class="value" id="seconds">00</div><div class="label">Segundos</div></div>
+</div>
+</div>
+<aside class="right">
+<div class="heart">❤</div>
+<p id="status">Esperando la magia…</p>
+</aside>
+</section>
+</main>
+
+
+<div class="controls">
+<button id="pause">Pausar fondos</button>
+<button id="next">Siguiente</button>
+</div>
+<div class="credits">Abel M.R</div>
+
+
+<script src="contador.js"></script>
+</body>
+</html>
