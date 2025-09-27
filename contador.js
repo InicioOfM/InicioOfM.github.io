@@ -6,7 +6,7 @@ const now = new Date();
 
 
 
- const targetDate = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 23, 55, 0, 0);
+ const targetDate = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 23, 58, 0, 0);
 
 const elH = document.getElementById('hours');
 const elM = document.getElementById('minutes');
@@ -114,3 +114,4 @@ document.getElementById('next').addEventListener('click', () => {
     startAutoplay();
   }
 });
+
